@@ -14,24 +14,28 @@ class BasiqAPITests: XCTestCase {
   private static var api = BasiqAPI()
   private static var user: User!
   private static var institution: Institution!
+  private static var job: Job!
   
-  var apiKey: String {
-    if let path = Bundle.main.path(forResource: "Info", ofType: "plist"),
-      let data = NSDictionary(contentsOfFile: path) {
-      return data["BasiqAPIKey"] as! String
-    }
-    return ""
-  }
+  private static let users = [
+    "gavinBelson": "hooli2016",
+    "jared": "django",
+    "richard": "tabsnotspaces"
+  ]
+  
+  // This is always a development API key
+  let apiKey = "NzliODQ1N2EtNTAyNi00NDEyLTkxOTMtZGE2N2NmYWM3ZjBiOjMxNGEzNjIzLTAxNWEtNDRhZi1hNDg4LThlZmY1ZDg1YTdjMg=="
   
   override func setUp() {
     super.setUp()
     BasiqAPITests.api.logRequests = true
+    DispatchQueue.promises = .global()
   }
   
   
   func test1PostTokenRequest() {
     let promise = expectation(description: "Performing request")
     
+    print(apiKey)
     BasiqAPITests.api.connect(apiKey: apiKey).then {_ in
       print("Fetched access token")
       promise.fulfill()
@@ -83,13 +87,15 @@ class BasiqAPITests: XCTestCase {
   func test4PostConnectionRequest() {
     let promise = expectation(description: "Performing request")
     let postInstitution = PostInstitution(BasiqAPITests.institution)
-    let connection = PostConnection(loginId: "test@gmail.com", password: "12345", institution: postInstitution)
+    let userData = BasiqAPITests.users.randomElement()!
+    let connection = PostConnection(loginId: userData.key, password: userData.value, institution: postInstitution)
     let request = PostConnectionRequest(userId: BasiqAPITests.user.id, connection: connection)
     
     BasiqAPITests.api.send(request) {
       switch $0 {
-      case .success(_):
-        print("Fetched job")
+      case .success(let job):
+        print("Started job")
+        BasiqAPITests.job = job
         promise.fulfill()
         
       case .failure(let error):
@@ -100,7 +106,29 @@ class BasiqAPITests: XCTestCase {
     waitForExpectations(timeout: 15, handler: nil)
   }
   
-  func test5GetTransactionsRequest() {
+  func test5PollJob() {
+    let promise = expectation(description: "Performing request")
+    var counter = 0
+    
+    BasiqAPITests.api.poll(job: BasiqAPITests.job, update: {
+      counter = counter + 1
+      print("\n\nUpdating \(counter) time")
+      $0.forEach {
+        print("\($0.description)\n")
+      }
+      print("\n")
+    }).then {_ in
+      print("Job finished with success!")
+      promise.fulfill()
+    }.catch {
+      XCTFail($0.localizedDescription)
+    }
+    
+    // Big timeout because job can run long time
+    waitForExpectations(timeout: 100, handler: nil)
+  }
+  
+  func test6GetTransactionsRequest() {
     let promise = expectation(description: "Performing request")
     let request = GetTransactionsRequest(userId: BasiqAPITests.user.id)
     
@@ -115,6 +143,6 @@ class BasiqAPITests: XCTestCase {
       }
     }
     
-    waitForExpectations(timeout: 15, handler: nil)
+    waitForExpectations(timeout: 30, handler: nil)
   }
 }

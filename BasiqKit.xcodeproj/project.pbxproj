@@ -33,6 +33,9 @@
 		797FF4192170C9B5005D1AAB /* PostUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF4052170C9B5005D1AAB /* PostUserRequest.swift */; };
 		797FF41A2170C9B5005D1AAB /* PostConnectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF4062170C9B5005D1AAB /* PostConnectionRequest.swift */; };
 		797FF41C2170C9BD005D1AAB /* BasiqAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF41B2170C9BD005D1AAB /* BasiqAPITests.swift */; };
+		797FF41E2170CE50005D1AAB /* GetJobRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF41D2170CE50005D1AAB /* GetJobRequest.swift */; };
+		797FF4202170F017005D1AAB /* DateFormatter+iso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF41F2170F017005D1AAB /* DateFormatter+iso.swift */; };
+		797FF4222170F04E005D1AAB /* URLRequest+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF4212170F04E005D1AAB /* URLRequest+Description.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		797FF4052170C9B5005D1AAB /* PostUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUserRequest.swift; sourceTree = "<group>"; };
 		797FF4062170C9B5005D1AAB /* PostConnectionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostConnectionRequest.swift; sourceTree = "<group>"; };
 		797FF41B2170C9BD005D1AAB /* BasiqAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasiqAPITests.swift; sourceTree = "<group>"; };
+		797FF41D2170CE50005D1AAB /* GetJobRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJobRequest.swift; sourceTree = "<group>"; };
+		797FF41F2170F017005D1AAB /* DateFormatter+iso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+iso.swift"; sourceTree = "<group>"; };
+		797FF4212170F04E005D1AAB /* URLRequest+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Description.swift"; sourceTree = "<group>"; };
 		8802BE7F466FE2D710E05CE9 /* Pods-BasiqKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasiqKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasiqKitTests/Pods-BasiqKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		D253E11378C46A2B31F67F0A /* Pods_BasiqKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasiqKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA80900494F912835F485F94 /* Pods-BasiqKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasiqKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasiqKitTests/Pods-BasiqKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +193,8 @@
 				797FF3FB2170C9B5005D1AAB /* Result.swift */,
 				797FF3FC2170C9B5005D1AAB /* RequestBuilder.swift */,
 				797FF3FD2170C9B5005D1AAB /* ResponseValidator.swift */,
+				797FF41F2170F017005D1AAB /* DateFormatter+iso.swift */,
+				797FF4212170F04E005D1AAB /* URLRequest+Description.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -208,6 +216,7 @@
 				797FF4042170C9B5005D1AAB /* PostTokenRequest.swift */,
 				797FF4052170C9B5005D1AAB /* PostUserRequest.swift */,
 				797FF4062170C9B5005D1AAB /* PostConnectionRequest.swift */,
+				797FF41D2170CE50005D1AAB /* GetJobRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -401,12 +410,15 @@
 				797FF4072170C9B5005D1AAB /* BasiqAPI.swift in Sources */,
 				797FF4172170C9B5005D1AAB /* GetInstitutionsRequest.swift in Sources */,
 				797FF41A2170C9B5005D1AAB /* PostConnectionRequest.swift in Sources */,
+				797FF4202170F017005D1AAB /* DateFormatter+iso.swift in Sources */,
 				797FF4092170C9B5005D1AAB /* BasiqErrors.swift in Sources */,
 				797FF40E2170C9B5005D1AAB /* Account.swift in Sources */,
 				797FF4162170C9B5005D1AAB /* GetTransactionsRequest.swift in Sources */,
 				797FF4142170C9B5005D1AAB /* BasiqError.swift in Sources */,
+				797FF4222170F04E005D1AAB /* URLRequest+Description.swift in Sources */,
 				797FF40B2170C9B5005D1AAB /* BasiqResponse.swift in Sources */,
 				797FF4082170C9B5005D1AAB /* Connection.swift in Sources */,
+				797FF41E2170CE50005D1AAB /* GetJobRequest.swift in Sources */,
 				797FF4102170C9B5005D1AAB /* Job.swift in Sources */,
 				797FF4152170C9B5005D1AAB /* APIRequest.swift in Sources */,
 				797FF4112170C9B5005D1AAB /* Result.swift in Sources */,
@@ -569,7 +581,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BasiqKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.BasiqKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -591,7 +607,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BasiqKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.BasiqKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -608,7 +628,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3J3S3699E;
 				INFOPLIST_FILE = BasiqKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.BasiqKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -624,7 +648,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3J3S3699E;
 				INFOPLIST_FILE = BasiqKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.BasiqKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

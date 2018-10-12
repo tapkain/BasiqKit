@@ -25,7 +25,7 @@ public struct JobFull: BasicJobProtocol {
   public let updated: Date
   
   public let steps: [Step]
-  public struct Step: Codable {
+  public struct Step: Codable, CustomStringConvertible {
     public let title: String
     
     public let status: Status
@@ -36,10 +36,10 @@ public struct JobFull: BasicJobProtocol {
       case failed
     }
     
-    public let result: [Result]?
-    public struct Result: Codable {
-      public let type: String
-      public let url: String
+    public let result: [String: String]?
+    
+    public var description: String {
+      return "\(title) - \(status.rawValue)"
     }
   }
   

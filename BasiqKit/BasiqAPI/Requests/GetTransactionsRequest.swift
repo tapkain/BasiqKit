@@ -20,6 +20,12 @@ public class GetTransactionsRequest: APIRequest {
   public var queryItems: [String : String]?
   public var httpBody: GetTransactionsRequest.RequestBody?
   
+  public var decoder: JSONDecoder {
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .iso8601
+    return decoder
+  }
+  
   public init(userId: String) {
     resourceName = "users/\(userId)/transactions"
   }

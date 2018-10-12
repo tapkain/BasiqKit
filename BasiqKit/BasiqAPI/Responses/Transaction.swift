@@ -13,18 +13,18 @@ public struct Transaction: BasiqResponse {
   public let id: String
   public let status: String
   public let description: String
-  public let postDate: Date
-  public let transactionDate: Date
+  //public let postDate: Date?
+  //public let transactionDate: Date
   public let amount: String
   public let balance: String
-  public let bankCategory: String
+  public let bankCategory: String?
   public let account: String
   public let institution: String
   public let connection: String
   public let direction: String
   public let `class`: String
   
-  public let subClass: SubClass
+  public let subClass: SubClass?
   public struct SubClass: Codable {
     public let code: String
     public let title: String

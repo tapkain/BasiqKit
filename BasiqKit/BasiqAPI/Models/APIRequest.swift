@@ -24,4 +24,12 @@ public protocol APIRequest: class, Codable {
   var httpParameters: [String: String] { get set }
   var httpBody: RequestBody? { get set }
   var queryItems: [String: String]? { get set }
+  var decoder: JSONDecoder { get }
+}
+
+
+extension APIRequest {
+  public var decoder: JSONDecoder {
+    return JSONDecoder()
+  }
 }

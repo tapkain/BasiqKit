@@ -35,7 +35,7 @@ public enum BasiqError: LocalizedError, CustomStringConvertible {
       return error?.localizedDescription ?? "Decoding error."
       
     default:
-      return "CryptoCompareApi internal error."
+      return "BasiqAPI internal error."
     }
   }
   

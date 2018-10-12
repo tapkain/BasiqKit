@@ -46,7 +46,9 @@ public class BasiqAPI {
       task = urlSession.dataTask(with: urlRequest) { data, response, error in
         do {
           let validData = try ResponseValidator.validateDataTaskResponse(data, response, error)
-          let result = try! JSONDecoder().decode(T.Response.self, from: validData)
+          let decoder = request.decoder
+          print(String(data: validData, encoding: .ascii)!)
+          let result = try! decoder.decode(T.Response.self, from: validData)
           completion(.success(result))
         } catch let error as BasiqError {
           task.cancel()
@@ -94,28 +96,29 @@ extension BasiqAPI {
     }
   }
   
-//  @discardableResult
-//  public func poll(job: Job) -> Promise<JobFull> {
-//    
-//  }
-}
-
-
-extension URLRequest {
-  func formattedDescription() -> String {
-    var d = ""
-    d.append("\n\(httpMethod!) \(url!)\n")
-    
-    if let headers = allHTTPHeaderFields {
-      d.append(headers.description)
+  // TODO: - Add timeout to this function
+  @discardableResult
+  public func poll(job: Job,
+                   update: @escaping ([JobFull.Step]) -> (),
+                   interval: TimeInterval = 2) -> Promise<JobFull> {
+    let request = GetJobRequest(jobId: job.id)
+    return Promise { () -> JobFull? in 
+      var jobFull: JobFull!
+      
+      repeat {
+        // Fetch job every X second
+        jobFull = try await(self.send(request).delay(interval))
+        update(jobFull.steps)
+        
+        // Check for failure
+        if jobFull.steps.reduce(false, { $0 || $1.status == .failed }) {
+          throw BasiqError.encoding
+        }
+        
+        // While every job step is not yet successed
+      } while !jobFull.steps.reduce(true, { $0 && $1.status == .success })
+      
+      return jobFull
     }
-    
-    if let body = httpBody {
-      d.append("\n")
-      d.append(String(data: body, encoding: .ascii)!)
-    }
-    
-    d.append("\n\n")
-    return d
   }
 }
