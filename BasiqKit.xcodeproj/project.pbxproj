@@ -7,9 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C9A6D22A75B94C401E2A0CB /* Pods_BasiqKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DB195E2FB346A76FAE41E9 /* Pods_BasiqKitTests.framework */; };
+		5ABDBEC59A4DF8F686D5C06B /* Pods_BasiqKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D253E11378C46A2B31F67F0A /* Pods_BasiqKit.framework */; };
 		797FF3DD2170C910005D1AAB /* BasiqKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797FF3D32170C910005D1AAB /* BasiqKit.framework */; };
 		797FF3E22170C910005D1AAB /* BasiqKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3E12170C910005D1AAB /* BasiqKitTests.swift */; };
 		797FF3E42170C910005D1AAB /* BasiqKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 797FF3D62170C910005D1AAB /* BasiqKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		797FF4072170C9B5005D1AAB /* BasiqAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3EF2170C9B5005D1AAB /* BasiqAPI.swift */; };
+		797FF4082170C9B5005D1AAB /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3F12170C9B5005D1AAB /* Connection.swift */; };
+		797FF4092170C9B5005D1AAB /* BasiqErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3F22170C9B5005D1AAB /* BasiqErrors.swift */; };
+		797FF40A2170C9B5005D1AAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3F32170C9B5005D1AAB /* User.swift */; };
+		797FF40B2170C9B5005D1AAB /* BasiqResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3F42170C9B5005D1AAB /* BasiqResponse.swift */; };
+		797FF40C2170C9B5005D1AAB /* Institution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3F52170C9B5005D1AAB /* Institution.swift */; };
+		797FF40D2170C9B5005D1AAB /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3F62170C9B5005D1AAB /* Transaction.swift */; };
+		797FF40E2170C9B5005D1AAB /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3F72170C9B5005D1AAB /* Account.swift */; };
+		797FF40F2170C9B5005D1AAB /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3F82170C9B5005D1AAB /* Token.swift */; };
+		797FF4102170C9B5005D1AAB /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3F92170C9B5005D1AAB /* Job.swift */; };
+		797FF4112170C9B5005D1AAB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3FB2170C9B5005D1AAB /* Result.swift */; };
+		797FF4122170C9B5005D1AAB /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3FC2170C9B5005D1AAB /* RequestBuilder.swift */; };
+		797FF4132170C9B5005D1AAB /* ResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3FD2170C9B5005D1AAB /* ResponseValidator.swift */; };
+		797FF4142170C9B5005D1AAB /* BasiqError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF3FF2170C9B5005D1AAB /* BasiqError.swift */; };
+		797FF4152170C9B5005D1AAB /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF4002170C9B5005D1AAB /* APIRequest.swift */; };
+		797FF4162170C9B5005D1AAB /* GetTransactionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF4022170C9B5005D1AAB /* GetTransactionsRequest.swift */; };
+		797FF4172170C9B5005D1AAB /* GetInstitutionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF4032170C9B5005D1AAB /* GetInstitutionsRequest.swift */; };
+		797FF4182170C9B5005D1AAB /* PostTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF4042170C9B5005D1AAB /* PostTokenRequest.swift */; };
+		797FF4192170C9B5005D1AAB /* PostUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF4052170C9B5005D1AAB /* PostUserRequest.swift */; };
+		797FF41A2170C9B5005D1AAB /* PostConnectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF4062170C9B5005D1AAB /* PostConnectionRequest.swift */; };
+		797FF41C2170C9BD005D1AAB /* BasiqAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797FF41B2170C9BD005D1AAB /* BasiqAPITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +46,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51DB195E2FB346A76FAE41E9 /* Pods_BasiqKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasiqKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65AB44D29AA3629132830CE9 /* Pods-BasiqKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasiqKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasiqKit/Pods-BasiqKit.release.xcconfig"; sourceTree = "<group>"; };
 		797FF3D32170C910005D1AAB /* BasiqKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BasiqKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		797FF3D62170C910005D1AAB /* BasiqKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasiqKit.h; sourceTree = "<group>"; };
 		797FF3D72170C910005D1AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797FF3DC2170C910005D1AAB /* BasiqKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasiqKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		797FF3E12170C910005D1AAB /* BasiqKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasiqKitTests.swift; sourceTree = "<group>"; };
 		797FF3E32170C910005D1AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		797FF3EF2170C9B5005D1AAB /* BasiqAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasiqAPI.swift; sourceTree = "<group>"; };
+		797FF3F12170C9B5005D1AAB /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		797FF3F22170C9B5005D1AAB /* BasiqErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasiqErrors.swift; sourceTree = "<group>"; };
+		797FF3F32170C9B5005D1AAB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		797FF3F42170C9B5005D1AAB /* BasiqResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasiqResponse.swift; sourceTree = "<group>"; };
+		797FF3F52170C9B5005D1AAB /* Institution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Institution.swift; sourceTree = "<group>"; };
+		797FF3F62170C9B5005D1AAB /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		797FF3F72170C9B5005D1AAB /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		797FF3F82170C9B5005D1AAB /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		797FF3F92170C9B5005D1AAB /* Job.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		797FF3FB2170C9B5005D1AAB /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		797FF3FC2170C9B5005D1AAB /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		797FF3FD2170C9B5005D1AAB /* ResponseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseValidator.swift; sourceTree = "<group>"; };
+		797FF3FF2170C9B5005D1AAB /* BasiqError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasiqError.swift; sourceTree = "<group>"; };
+		797FF4002170C9B5005D1AAB /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		797FF4022170C9B5005D1AAB /* GetTransactionsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTransactionsRequest.swift; sourceTree = "<group>"; };
+		797FF4032170C9B5005D1AAB /* GetInstitutionsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetInstitutionsRequest.swift; sourceTree = "<group>"; };
+		797FF4042170C9B5005D1AAB /* PostTokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTokenRequest.swift; sourceTree = "<group>"; };
+		797FF4052170C9B5005D1AAB /* PostUserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUserRequest.swift; sourceTree = "<group>"; };
+		797FF4062170C9B5005D1AAB /* PostConnectionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostConnectionRequest.swift; sourceTree = "<group>"; };
+		797FF41B2170C9BD005D1AAB /* BasiqAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasiqAPITests.swift; sourceTree = "<group>"; };
+		8802BE7F466FE2D710E05CE9 /* Pods-BasiqKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasiqKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BasiqKitTests/Pods-BasiqKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		D253E11378C46A2B31F67F0A /* Pods_BasiqKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasiqKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA80900494F912835F485F94 /* Pods-BasiqKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasiqKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasiqKitTests/Pods-BasiqKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF5F8CCF8841F89562E676C8 /* Pods-BasiqKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasiqKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BasiqKit/Pods-BasiqKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ABDBEC59A4DF8F686D5C06B /* Pods_BasiqKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +95,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				797FF3DD2170C910005D1AAB /* BasiqKit.framework in Frameworks */,
+				0C9A6D22A75B94C401E2A0CB /* Pods_BasiqKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08BED3E6F8E8F784D8C8717B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F8CCF8841F89562E676C8 /* Pods-BasiqKit.debug.xcconfig */,
+				65AB44D29AA3629132830CE9 /* Pods-BasiqKit.release.xcconfig */,
+				DA80900494F912835F485F94 /* Pods-BasiqKitTests.debug.xcconfig */,
+				8802BE7F466FE2D710E05CE9 /* Pods-BasiqKitTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		797FF3C92170C910005D1AAB = {
 			isa = PBXGroup;
 			children = (
 				797FF3D52170C910005D1AAB /* BasiqKit */,
 				797FF3E02170C910005D1AAB /* BasiqKitTests */,
 				797FF3D42170C910005D1AAB /* Products */,
+				08BED3E6F8E8F784D8C8717B /* Pods */,
+				9D2AE0DBD0C183784E6E00CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +136,7 @@
 		797FF3D52170C910005D1AAB /* BasiqKit */ = {
 			isa = PBXGroup;
 			children = (
+				797FF3EE2170C9B5005D1AAB /* BasiqAPI */,
 				797FF3D62170C910005D1AAB /* BasiqKit.h */,
 				797FF3D72170C910005D1AAB /* Info.plist */,
 			);
@@ -80,10 +146,79 @@
 		797FF3E02170C910005D1AAB /* BasiqKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				797FF41B2170C9BD005D1AAB /* BasiqAPITests.swift */,
 				797FF3E12170C910005D1AAB /* BasiqKitTests.swift */,
 				797FF3E32170C910005D1AAB /* Info.plist */,
 			);
 			path = BasiqKitTests;
+			sourceTree = "<group>";
+		};
+		797FF3EE2170C9B5005D1AAB /* BasiqAPI */ = {
+			isa = PBXGroup;
+			children = (
+				797FF3EF2170C9B5005D1AAB /* BasiqAPI.swift */,
+				797FF3F02170C9B5005D1AAB /* Responses */,
+				797FF3FA2170C9B5005D1AAB /* Utils */,
+				797FF3FE2170C9B5005D1AAB /* Models */,
+				797FF4012170C9B5005D1AAB /* Requests */,
+			);
+			path = BasiqAPI;
+			sourceTree = "<group>";
+		};
+		797FF3F02170C9B5005D1AAB /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				797FF3F12170C9B5005D1AAB /* Connection.swift */,
+				797FF3F22170C9B5005D1AAB /* BasiqErrors.swift */,
+				797FF3F32170C9B5005D1AAB /* User.swift */,
+				797FF3F42170C9B5005D1AAB /* BasiqResponse.swift */,
+				797FF3F52170C9B5005D1AAB /* Institution.swift */,
+				797FF3F62170C9B5005D1AAB /* Transaction.swift */,
+				797FF3F72170C9B5005D1AAB /* Account.swift */,
+				797FF3F82170C9B5005D1AAB /* Token.swift */,
+				797FF3F92170C9B5005D1AAB /* Job.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		797FF3FA2170C9B5005D1AAB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				797FF3FB2170C9B5005D1AAB /* Result.swift */,
+				797FF3FC2170C9B5005D1AAB /* RequestBuilder.swift */,
+				797FF3FD2170C9B5005D1AAB /* ResponseValidator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		797FF3FE2170C9B5005D1AAB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				797FF3FF2170C9B5005D1AAB /* BasiqError.swift */,
+				797FF4002170C9B5005D1AAB /* APIRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		797FF4012170C9B5005D1AAB /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				797FF4022170C9B5005D1AAB /* GetTransactionsRequest.swift */,
+				797FF4032170C9B5005D1AAB /* GetInstitutionsRequest.swift */,
+				797FF4042170C9B5005D1AAB /* PostTokenRequest.swift */,
+				797FF4052170C9B5005D1AAB /* PostUserRequest.swift */,
+				797FF4062170C9B5005D1AAB /* PostConnectionRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		9D2AE0DBD0C183784E6E00CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D253E11378C46A2B31F67F0A /* Pods_BasiqKit.framework */,
+				51DB195E2FB346A76FAE41E9 /* Pods_BasiqKitTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 797FF3E72170C910005D1AAB /* Build configuration list for PBXNativeTarget "BasiqKit" */;
 			buildPhases = (
+				143C45D881AB5A861AB1732E /* [CP] Check Pods Manifest.lock */,
 				797FF3CE2170C910005D1AAB /* Headers */,
 				797FF3CF2170C910005D1AAB /* Sources */,
 				797FF3D02170C910005D1AAB /* Frameworks */,
@@ -122,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 797FF3EA2170C910005D1AAB /* Build configuration list for PBXNativeTarget "BasiqKitTests" */;
 			buildPhases = (
+				9241FD9A87353EF1A8E868D7 /* [CP] Check Pods Manifest.lock */,
 				797FF3D82170C910005D1AAB /* Sources */,
 				797FF3D92170C910005D1AAB /* Frameworks */,
 				797FF3DA2170C910005D1AAB /* Resources */,
+				7E81B51496EA5884EF33B327 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,11 +327,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		143C45D881AB5A861AB1732E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasiqKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E81B51496EA5884EF33B327 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BasiqKitTests/Pods-BasiqKitTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BasiqKitTests/Pods-BasiqKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9241FD9A87353EF1A8E868D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasiqKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		797FF3CF2170C910005D1AAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797FF40F2170C9B5005D1AAB /* Token.swift in Sources */,
+				797FF40D2170C9B5005D1AAB /* Transaction.swift in Sources */,
+				797FF4192170C9B5005D1AAB /* PostUserRequest.swift in Sources */,
+				797FF4132170C9B5005D1AAB /* ResponseValidator.swift in Sources */,
+				797FF40C2170C9B5005D1AAB /* Institution.swift in Sources */,
+				797FF4122170C9B5005D1AAB /* RequestBuilder.swift in Sources */,
+				797FF40A2170C9B5005D1AAB /* User.swift in Sources */,
+				797FF4072170C9B5005D1AAB /* BasiqAPI.swift in Sources */,
+				797FF4172170C9B5005D1AAB /* GetInstitutionsRequest.swift in Sources */,
+				797FF41A2170C9B5005D1AAB /* PostConnectionRequest.swift in Sources */,
+				797FF4092170C9B5005D1AAB /* BasiqErrors.swift in Sources */,
+				797FF40E2170C9B5005D1AAB /* Account.swift in Sources */,
+				797FF4162170C9B5005D1AAB /* GetTransactionsRequest.swift in Sources */,
+				797FF4142170C9B5005D1AAB /* BasiqError.swift in Sources */,
+				797FF40B2170C9B5005D1AAB /* BasiqResponse.swift in Sources */,
+				797FF4082170C9B5005D1AAB /* Connection.swift in Sources */,
+				797FF4102170C9B5005D1AAB /* Job.swift in Sources */,
+				797FF4152170C9B5005D1AAB /* APIRequest.swift in Sources */,
+				797FF4112170C9B5005D1AAB /* Result.swift in Sources */,
+				797FF4182170C9B5005D1AAB /* PostTokenRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				797FF3E22170C910005D1AAB /* BasiqKitTests.swift in Sources */,
+				797FF41C2170C9BD005D1AAB /* BasiqAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +558,7 @@
 		};
 		797FF3E82170C910005D1AAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF5F8CCF8841F89562E676C8 /* Pods-BasiqKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -350,11 +569,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BasiqKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.BasiqKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -365,6 +580,7 @@
 		};
 		797FF3E92170C910005D1AAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65AB44D29AA3629132830CE9 /* Pods-BasiqKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -375,11 +591,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BasiqKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.BasiqKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -390,15 +602,13 @@
 		};
 		797FF3EB2170C910005D1AAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA80900494F912835F485F94 /* Pods-BasiqKitTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3J3S3699E;
 				INFOPLIST_FILE = BasiqKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.BasiqKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -408,15 +618,13 @@
 		};
 		797FF3EC2170C910005D1AAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8802BE7F466FE2D710E05CE9 /* Pods-BasiqKitTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3J3S3699E;
 				INFOPLIST_FILE = BasiqKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tapkain.BasiqKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
