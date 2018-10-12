@@ -31,7 +31,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
-*.plist
+BasiqKitTests/Info.plist
 
 ## Playgrounds
 timeline.xctimeline
