@@ -18,7 +18,7 @@ public class BasiqAPI {
   private var token: Token?
   public var logRequests = false
   
-  init(baseEndpoint: String = "https://au-api.basiq.io",
+  public init(baseEndpoint: String = "https://au-api.basiq.io",
        urlSession: URLSession = .shared) {
     self.baseEndpoint = baseEndpoint
     self.urlSession = urlSession
