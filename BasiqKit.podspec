@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BasiqKit"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "BasiqKit for basiq.io"
   s.description  = "BasiqKit allows to use Basiq API and choose banks, fetch transaction with native way on iOS"
 
